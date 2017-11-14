@@ -72,6 +72,9 @@ class IdealSolutionNode(Node):
             return ''
 
         ideal_solution = Submission.objects.filter(user=ideal_user, problem=problem['db_object'], status=1).order_by('-time').first()
+        if ideal_solution is None:
+            ideal_solution = user_solution
+
         if user_solution is not None:
             return '''
 	<table class="table problem_user_and_ideal_solutions hidden-xs hidden-md">

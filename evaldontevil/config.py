@@ -24,4 +24,4 @@ FSIZE_LIMIT = 8 * KB # maximum size of the files, which may be created by the co
 
 
 VENV_PYTHON = '/srv/evaldontevil-python' # path to the python virtual environment, which will be used for code execution
-USER = 'pythontutor-sandbox' # user, which will be used for code execution. Set to None if you don't want to set user or you don't have such permissions
+USER = None # user, which will be used for code execution. Set to None if you don't want to set user or you don't have such permissions
